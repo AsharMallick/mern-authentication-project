@@ -30,13 +30,13 @@ app.use("/api/v1/auth/", require("./routes/Auth"));
 console.log({ state: "Running" });
 
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
-app.get("/", (req, res) => {
-  res.send(
-    "<h1>API WORKS WATCH EXAMPLE GET API <a href='http://127.0.0.1:" +
-      process.env.PORT +
-      "/api/v1/todo/todos'>HERE</a></h1>"
-  );
-});
+// app.get("/", (req, res) => {
+//   res.send(
+//     "<h1>API WORKS WATCH EXAMPLE GET API <a href='http://127.0.0.1:" +
+//       process.env.PORT +
+//       "/api/v1/todo/todos'>HERE</a></h1>"
+//   );
+// });
 
 
 app.get('*', (req, res)=>{
